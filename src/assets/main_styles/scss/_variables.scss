@@ -1,0 +1,10 @@
+$base-color: #F0F5FF;
+$base-font-color: #000000;
+$base-button-color: #1E91FF;
+$button-color: #FFE458;
+
+@mixin not-last-child($selector) {
+  & #{$selector}:not(:last-child) {
+    @content;
+  }
+}

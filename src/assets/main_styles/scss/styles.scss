@@ -1,0 +1,47 @@
+@import "_variables";
+
+button {
+  display: inline-block;
+  outline: none;
+  *zoom: 1;
+  text-align: center;
+  text-decoration: none;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 6px 18px;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+  &.ghost_button {
+    background: transparent;
+    border: 1px $base-button-color solid;
+    border-radius: 3px;
+    color: $base-button-color;
+    &:hover {
+      background: $base-button-color;
+      color: #fff;
+      border-color: $base-button-color;
+    }
+  }
+
+  &.btn_default {
+    //background: $base-button-color;
+   // border: 1px $base-button-color solid;
+    border-radius: 3px;
+    color: #fff;
+  }
+
+}
+
+//.btn_text {
+//  padding: 10px 20px;
+//  font-style: normal;
+//  font-weight: 500;
+//  font-size: 14px;
+//}
+
+
