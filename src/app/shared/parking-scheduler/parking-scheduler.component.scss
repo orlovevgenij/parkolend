@@ -1,0 +1,103 @@
+@import "../../../assets/main_styles/scss/variables";
+
+.booking_section {
+  h2 {
+    font-size: 25px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+}
+
+.parking_schedule {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.order_section {
+  -webkit-box-shadow: 0 8px 6px -6px #bdc6d2;
+  -moz-box-shadow: 0 8px 6px -6px #bdc6d2;
+  box-shadow: 0 8px 6px -6px #bdc6d2;
+}
+
+.form_input {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.address_label, .startDate {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.address_input {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.DatePicker {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+.TimePicker {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+
+
+p-card {
+  .comment {
+    font-size: 15px;
+    color: #94979a;
+  }
+}
+
+
+
+
+
+
+@media (min-width: 767.98px) {
+  .DatePicker {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  .TimePicker {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
+  .top-bar-desk {
+    display: none;
+  }
+
+}
+
+@media (min-width: 1199.98px) {
+
+  .address_label, .startDate {
+    flex: 0 0 15%;
+    max-width: 15%;
+  }
+
+  .top-bar-desk {
+    display: block;
+  }
+
+  .top-bar-tablet {
+    display: none;
+  }
+}

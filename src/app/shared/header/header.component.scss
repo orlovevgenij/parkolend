@@ -1,0 +1,120 @@
+@import "../../../assets/main_styles/scss/variables";
+
+.navbar_section {
+  //background: $base-color;
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    a {
+      font-size: 16px;
+      color: $base-font-color;
+    }
+  }
+
+  .navbar_brand {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #0A5094;
+  }
+
+  .contacts_navbar {
+    padding-top: 15px;
+    text-align: end;
+    list-style-type: none;
+  }
+
+  ul.navbar-nav {
+    display: flex;
+    list-style-type: none;
+    li a {
+      &:hover {
+        color: #FF1E58;
+      }
+    }
+  }
+
+
+  @media (max-width: 575px) {
+    .navbar_brand {
+      font-size: 17px;
+      line-height: 21px;
+    }
+
+    .contacts_navbar {
+      display: none;
+    }
+
+    .ghost_button{
+      display: block;
+    }
+
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .ghost_button {
+      display: block;
+    }
+
+    .contacts_navbar {
+      display: none;
+    }
+  }
+
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .ghost_button {
+      display: none;
+    }
+
+    .navbar_brand {
+      font-size: 20px;
+    }
+
+.navbar-collapse {
+  margin-left: 1.5rem !important;
+}
+
+    .navbar-nav {
+      flex-direction: row;
+      a {
+        font-size: $font-size-base;
+        padding-right: 10px;
+        @include not-last-child('a') {
+          padding-right: 16px;
+        }
+      }
+    }
+
+    .navbar_section ul a {
+      font-size: $font-size-base;
+    }
+
+    .collapse:not(.show) {
+      display: flex !important;
+      flex-basis: auto;
+    }
+
+
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .ghost_button {
+      display: none;
+    }
+
+  }
+
+  @media (min-width: 1200px) {
+    .ghost_button {
+      display: none;
+    }
+  }
+
+
+
+}
+

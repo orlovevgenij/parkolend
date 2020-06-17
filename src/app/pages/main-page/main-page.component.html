@@ -1,0 +1,149 @@
+<section class="main_page text-center">
+  <div class="main_banner background">
+    <div class="container">
+      <app-header></app-header>
+      <div class="title">
+        <h2 class="pt-4 pb-2 font-weight-bold">Забронюйте паркування онлайн</h2>
+        <p class="font-weight-normal subtitle">Обирайте зручні місця, порівнюйте ціни, сплачуйте онлайн</p>
+      </div>
+      <div class="search_section mt-5">
+        <div class="button_section d-flex">
+          <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+        </div>
+        <div class="searchbox-wrap d-flex mt-4">
+          <input type="text" placeholder="Адреса або місто">
+          <button class="btn_default btn_blue">Знайти</button>
+        </div>
+        <div class="find_nearest_btn d-flex mt-4">
+          <button class="ghost_button " type="button">
+            <svg class="point_icon m-2" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                    d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+            </svg>
+            <span class="btn-text">Знайти парковку біля мене</span>
+            <span class="bi-cursor-fill">Знайти біля мене</span>
+          </button>
+        </div>
+        <div class="advantages_items justify-content-center row mt-5">
+          <div class="col-md-4 col-sm-6 text-right">
+            Швидке бронювання
+          </div>
+          <div class="col-md-4 col-sm-6">
+            Електронний талон
+          </div>
+          <div class="col-md-4 col-sm-12 text-left">
+            100% повернення коштів
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="booking_section mrt container">
+    <h2 class="pb-3">Бронюйте на будь-який час</h2>
+    <p class="font-weight-normal subtitle p-3 mr-auto ml-auto">ParkFinder дозволяє забронювати місця для паркування онлайн,
+      на зараз або на потім. Це швидше та дешевше, ніж класичне бронювання за телефоном.</p>
+    <app-parking-scheduler></app-parking-scheduler>
+  </div>
+
+  <div class="advantages_section container mrt text-md-left text-sm-left ">
+    <div class="adv_item d-flex row mb-5">
+      <div class="adv_text col-lg-6 col-md-6 col-sm-12">
+        <h3 class="pb-3">Бронюйте з мобільного</h3>
+        <p class="font-weight-normal subtitle mr-auto ml-auto">Ми зробили мобільну версію Парколенд так, щоб сайтом було
+          зручно користуватися зі смартфону.</p>
+        <p>Не потрібно завантажувати сумнівні додатки з рекламою — просто відкрийте цю сторінку з мобільного, щоб
+          забронювати місце.</p>
+      </div>
+      <div class="adv_img col-lg-6 col-md-6 col-sm-12 d-flex justify-content-md-end justify-content-sm-center">
+        <img src="assets/img/adv-img1.png" alt="advantges_img">
+      </div>
+    </div>
+    <div class="row mb-8">
+      <div class="adv_img col-lg-6 col-md-6 col-sm-12 d-flex justify-content-md-start justify-content-sm-center">
+        <img src="assets/img/adv-img2.png" alt="advantges_img">
+      </div>
+      <div class="adv_text col-lg-6 col-md-6 col-sm-12">
+        <h3 class="pb-3">Заробляйте на вільному паркомісці</h3>
+        <p class="font-weight-normal subtitle mr-auto ml-auto">Заповніть заявку за 2 хвилини та перетворіть вільний
+          простір у джерело доходів разом з Парколенд.</p>
+        <button class="ghost_button mt-3 p-2" type="button">
+          <span class="btn_text">Заробити</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="blog_section mrt container">
+    <app-blog></app-blog>
+  </div>
+
+  <div class="questions_section_background mrt">
+    <div class="questions_section container p-5 text-left">
+      <h2 class="pb-2 font-weight-bold text-left">Відповіді на запитання</h2>
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+
+          <p-accordion>
+            <p-accordionTab header="Як працює ціноутворення?" [selected]="true">
+              The story begins as Don Vito Corleone, the head of a New York Mafia family, overseeshis daughter's wedding. His beloved son ichael has just come home from the war, but does not intend to become part of his father's business. T hrough Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, kind and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the family.
+            </p-accordionTab>
+            <p-accordionTab header="Як використати промо-код?">
+              Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The_Godfather parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The_Godfather's depiction of the dark side of the American dream. In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy, killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.
+            </p-accordionTab>
+            <p-accordionTab header="Чи гарантоване бронювання парковки?">
+              After a break of more than  15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this third and final story of the fictional Corleone crime family. Two decades have passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate.
+            </p-accordionTab>
+            <p-accordionTab header="Що таке пропуск для паркування?">
+              Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The_Godfather parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The_Godfather's depiction of the dark side of the American dream. In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy, killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.
+            </p-accordionTab>
+            <p-accordionTab header="Чи потрібно входити та виходити в точний час на проїзд для паркування?">
+              After a break of more than  15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this third and final story of the fictional Corleone crime family. Two decades have passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate.
+            </p-accordionTab>
+          </p-accordion>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <p-accordion>
+            <p-accordionTab header="Що робити, якщо з моїм бронюванням щось піде не так?" [selected]="true">
+              The story begins as Don Vito Corleone, the head of a New York Mafia family, overseeshis daughter's wedding. His beloved son ichael has just come home from the war, but does not intend to become part of his father's business. T hrough Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, kind and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the family.
+            </p-accordionTab>
+            <p-accordionTab header="Чи можу я зробити кілька бронювань?">
+              Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The_Godfather parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The_Godfather's depiction of the dark side of the American dream. In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy, killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.
+            </p-accordionTab>
+            <p-accordionTab header="Як змінити дату/час мого бронювання?">
+              After a break of more than  15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this third and final story of the fictional Corleone crime family. Two decades have passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate.
+            </p-accordionTab>
+          </p-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="working_city container">
+    <h2 class="mrt pb-4 font-weight-bold text-left">Працюємо в таких містах</h2>
+    <div class="card-deck text-left">
+      <div class="card">
+        <img class="card-img-top" src="assets/img/kyiv-img.png" alt="kyiv image">
+        <h5 class="card-title pt-3">Київ</h5>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="assets/img/kharkiv-img.png" alt="kharkiv image">
+        <h5 class="card-title pt-3 position-relative">Харків<span class="badge badge-warning position-absolute font-weight-normal">Скоро</span></h5>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="assets/img/odessa-img.png" alt="odessa image">
+        <h5 class="card-title pt-3 position-relative">Одеса<span class="badge badge-warning position-absolute font-weight-normal">Скоро</span></h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="booking_advertisement container">
+    <h2 class="mrt pb-4">Забронюйте паркування за декілька секунд</h2>
+    <button class="btn_default btn_blue">Забронювати</button>
+  </div>
+
+  <footer class="footer_section container text-lg-left text-md-left text-sm-left">
+    <hr class="m-5">
+    <app-footer></app-footer>
+  </footer>
+</section>
