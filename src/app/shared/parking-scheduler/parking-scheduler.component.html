@@ -1,12 +1,94 @@
 <section class="parking_schedule">
-  <div class="search_section mt-5">
-    <div class="button_section d-flex">
-      <button class="btn_default" type="button">
-        <span class="btn_text">Погодинна</span>
-      </button>
-      <button class="ghost_button" type="button">
-        <span class="btn_text">Помісячна</span>
-      </button>
+  <div class="row">
+    <div class="col-lg-6 col-md-8 col-sm-7">
+      <div class="order_section p-4">
+        <div class="button_section d-flex">
+          <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+        </div>
+
+
+        <div class="form-group mt-3 row">
+          <label for="address" class="address_label col-form-label pl-3 text-left">Адреса</label>
+          <div class="address_input ml-3">
+            <input class="form_input p-1" type="text" value="" id="address" placeholder="вул. Чорновола, 144">
+          </div>
+        </div>
+        <div class="form-group mt-3 row">
+          <label for="startDate" class="startDate col-form-label pl-3 text-left">Початок</label>
+          <div class="DatePicker ml-3">
+            <input class="form_input p-1" type="date" value="2011-08-19" id="startDate">
+          </div>
+          <div class="TimePicker ml-3">
+            <input class="form_input p-1" type="time" value="13:45:00">
+          </div>
+        </div>
+        <div class="form-group mt-3 row">
+          <label for="endDate" class="startDate col-form-label pl-3 text-left">Кінець</label>
+          <div class="DatePicker ml-3">
+            <input class="form-control p-1" type="date" value="2011-08-19" id="endDate">
+          </div>
+          <div class="TimePicker ml-3">
+            <input class="form-control p-1" type="time" value="13:45:00">
+          </div>
+        </div>
+<div class="row">
+  <div class="col-lg-7 col-md-7 col-sm-7 text-left">
+    <a role="button" aria-expanded="false" aria-controls="collapseExample">
+      Сортувати: за  <p-multiSelect [options]="cars" [(ngModel)]="selectedCars1"></p-multiSelect>
+    </a>
+
+  </div>
+  <div class="col-lg-5 col-md-5 col-sm-5 text-right">
+    <a>Фільтри <i class="pi pi-sliders-h" style="font-size: 1.5em"></i></a>
+  </div>
+</div>
+      </div>
+      <p-card>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="assets/img/Picture1.png" class="w-100" alt="card-img">
+          </div>
+          <div class="col-md-8 px-3">
+            <div class="row">
+              <div class="col-md-8">
+                <p-header>
+                  <h5 class="card-title text-left">Борщагівська, 12</h5>
+                </p-header>
+                <div class="row">
+                  <p-rating class="col-md-6 text-left" [(ngModel)]="val3" [cancel]="false"></p-rating>
+                  <span class="col-md-6 comment">Чудово (12)</span>
+                </div>
+                <div class="distance text-left pt-2">
+                  <img src="assets/img/Distance.png" alt="walker-icon">
+                  <p class="d-inline">0,5 км</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h5 class="font-weight-bold">350 ₴</h5>
+                <p class="payment comment">/місяць</p>
+              </div>
+              <p-footer class="pt-3">
+                <button class="transparent_btn">Подробиці</button>
+                <button class="transparent_btn">Забронювати</button>
+              </p-footer>
+            </div>
+          </div>
+        </div>
+      </p-card>
+
+    </div>
+    <div class="map_section col-lg-6 col-md-4 col-sm-5">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41060.57262692222!2d36.2371133!3d49.9684988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a0974892bcdb%3A0x935889bf816e2629!2z0JfQsNGJ0LjRgtC90LjQutC-0LIg0KPQutGA0LDQuNC90Ys!5e0!3m2!1sru!2sua!4v1591014024146!5m2!1sru!2sua"
+              width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
   </div>
+<!--  <img class="top-bar-desk" src="assets/img/tab-bar-desk.png" alt="top-bar-desk">-->
+<!--  <img class="top-bar-tablet" src="assets/img/tab-bar-tablet.png" alt="top-bar-tablet">-->
+
+
+
+
+
+
+
 </section>

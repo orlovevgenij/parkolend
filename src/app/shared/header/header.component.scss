@@ -1,7 +1,7 @@
 @import "../../../assets/main_styles/scss/variables";
 
 .navbar_section {
-  background: $base-color;
+  //background: $base-color;
 
   ul {
     margin-top: 0;
@@ -13,7 +13,6 @@
   }
 
   .navbar_brand {
-    font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 30px;
@@ -28,7 +27,7 @@
     list-style-type: none;
   }
 
-  #navbarNav ul {
+  ul.navbar-nav {
     display: flex;
     list-style-type: none;
     li a {
@@ -55,7 +54,7 @@
 
   }
 
-  @media (min-width: 576px) and (max-width: 759.98px) {
+  @media (min-width: 576px) and (max-width: 767.98px) {
     .ghost_button {
       display: block;
     }
@@ -66,21 +65,32 @@
   }
 
 
-  @media (min-width: 760px) and (max-width: 991.98px) {
+  @media (min-width: 768px) and (max-width: 991.98px) {
     .ghost_button {
       display: none;
     }
 
+    .navbar_brand {
+      font-size: 20px;
+    }
+
+.navbar-collapse {
+  margin-left: 1.5rem !important;
+}
 
     .navbar-nav {
       flex-direction: row;
       a {
-        font-size: 14px;
-        padding-right: 16px;
+        font-size: $font-size-base;
+        padding-right: 10px;
         @include not-last-child('a') {
           padding-right: 16px;
         }
       }
+    }
+
+    .navbar_section ul a {
+      font-size: $font-size-base;
     }
 
     .collapse:not(.show) {
@@ -88,6 +98,13 @@
       flex-basis: auto;
     }
 
+
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .ghost_button {
+      display: none;
+    }
 
   }
 

@@ -1,85 +1,197 @@
 @import "../../../assets/main_styles/scss/variables";
+
 .background {
-  background: $base-color;
+  background-color: $base-color;
+  height: 735px;
+  background-image: url('src/assets/img/city-desk.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
-.main_page {
-  .title p {
-    font-weight: normal;
+
+.main_banner {
+  .subtitle {
     font-size: 20px;
   }
-
   .search_section {
-    margin-top: 40px;
-    .button_section .btn_default {
-      background: $button-color;
-      border: 1px $button-color solid;
-      color: #000000;
-    }
 
     .searchbox-wrap {
-      display     : flex;
-      margin-top  : 30px;
-      margin-left : auto;
-      margin-right: auto;
-      flex                             : 1;
       padding: 5px 10px;
-      font-size                        : 1.1em;
+      font-size: 1.1em;
       background: #ffffff;
       border-radius: 7px;
-      box-shadow                       : none;
-      border                           : none;
-      box-shadow                       : 2px 4px 6px rgba(0, 0, 0, 0.19);
-
+      border: none;
+      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.19);
 
       input{
         flex: 1;
         font-size: 16px;
-        line-height: 100%;
         color: #1E91FF;
         opacity: 0.8;
         border: none;
-
       }
 
-      button.btn_default {
-
-        padding: 10px 20px;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 100%;
-        color: #fff;
-        background-color: $base-button-color;
-        border-color: $base-button-color;
-
-
-        &:hover{
-          background-color: #d6121f;
-          box-shadow      : 2px 2px 4px rgba(0, 0, 0, 0.19);
-        }
-
-      }
-    }
-    .find_nearest_btn svg {
-        margin-top: 4px;
-        margin-right: 15px;
     }
     .advantages_items {
       position: relative;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 20px;
+      font-size: $font-size-base;
       color: #335EB6;
-      img.badges_img {
-        position: absolute;
-        top: 150px;
-        //left: 50px;
-        z-index: 10;
+    }
+  }
+}
+
+.questions_section_background {
+  background: #F0F5FF;
+  .questions_section {
+    .btn {
+      padding: 0;
+    }
+    .btn-link {
+      color: #000000;
+    }
+  }
+}
+
+
+
+#accordion .bi .bi-chevron-right[aria-expanded="true"]:after {
+  transform: rotate(225deg);
+}
+
+.working_city .card span{
+  top: 5px;
+  background: $star-on-color;
+}
+
+footer .m-5 {
+  margin-top: 5rem!important;
+  margin-bottom: 5rem!important;
+}
+
+
+@media (max-width: 575.98px) {
+  .background {
+    height: 675px;
+    background-image: url('src/assets/img/city-mob.png');
+    background-position: center;
+  }
+
+  .font-weight-bold {
+    font-size: 30px;
+  }
+
+  .search_section {
+    margin-top: 1.5rem !important;
+  }
+
+  .searchbox-wrap, .find_nearest_btn, .advantages_items {
+    margin-top: 1rem !important;
+  }
+
+  .find_nearest_btn .btn-text {
+    display: none;
+  }
+
+  .advantages_items .text-right, .text-left {
+    text-align: unset !important;
+  }
+
+
+  .advantages_section {
+    text-align: left;
+    h3 {
+      margin-top: 20px;
+    }
+    button {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .adv_item {
+      flex-direction: row;
+
+      .adv_text {
+        order: 2;
       }
+
+      .adv_img {
+        order: 1;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .background {
+    height: 735px;
+    background-image: url('src/assets/img/city-tablet.png');
+  }
+
+  .search_section {
+    margin-top: 1.5rem;
+  }
+
+  .searchbox-wrap, .find_nearest_btn, .advantages_items  {
+    margin-top: 1rem;
+  }
+
+  .search_section .button_section, .find_nearest_btn {
+    justify-content: center;
+  }
+
+  .find_nearest_btn .btn-text {
+    display: none;
+  }
+
+  .advantages_items .text-right, .text-left {
+    text-align: unset!important;
+  }
+
+  .advantages_section  .adv_item {
+    flex-direction: row;
+    .adv_text {
+      order:2;
+    }
+    .adv_img {
+      order:1;
     }
   }
 
 
-
-
 }
 
+@media (min-width: 769px) {
+  .background {
+    height: 735px;
+    background-image: url('src/assets/img/city-desk.png');
+  }
+
+  .search_section .button_section, .find_nearest_btn {
+    justify-content: center;
+  }
+
+  .find_nearest_btn .bi-cursor-fill {
+    display: none;
+  }
+
+  .find_nearest_btn .btn-text {
+    display: inline;
+  }
+
+  .booking_section {
+    .subtitle {
+      width: 770px;
+    }
+  }
+
+  .booking_advertisement {
+    h2 {
+      margin-left: auto;
+      margin-right: auto;
+      width: 570px;
+    }
+  }
+
+}

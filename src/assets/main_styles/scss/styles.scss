@@ -1,4 +1,11 @@
 @import "_variables";
+.container, .container-sm, .container-md, .container-lg, .container-xl {
+  max-width: 1170px;
+}
+
+.mrt {
+  margin-top: 140px;
+}
 
 button {
   display: inline-block;
@@ -17,31 +24,133 @@ button {
   box-sizing: border-box;
   text-shadow: 0 1px 0 rgba(0,0,0,0.01);
   &.ghost_button {
-    background: transparent;
+    background: $without-color;
     border: 1px $base-button-color solid;
-    border-radius: 3px;
+    border-radius: $border-radius;
     color: $base-button-color;
     &:hover {
       background: $base-button-color;
       color: #fff;
       border-color: $base-button-color;
+      padding: 10px 20px;
+    }
+  }
+
+  &.transparent_btn {
+    //padding: 10px 20px;
+    background: $without-color;
+    border: $without-color;
+    color: $base-button-color;
+    &:hover {
+      background: $base-button-color;
+      color: #fff;
+      border-color: $base-button-color;
+      //padding: 10px 20px;
     }
   }
 
   &.btn_default {
-    //background: $base-button-color;
-   // border: 1px $base-button-color solid;
-    border-radius: 3px;
+    border-radius: $border-radius;
     color: #fff;
+    &.btn_blue {
+      padding: 10px 20px;
+      font-weight: 500;
+      font-size: $font-size-base;
+      color: #fff;
+      background-color: $base-button-color;
+      border-color: $base-button-color;
+    }
   }
 
+  &:focus {
+    outline: none;
+  }
 }
 
-//.btn_text {
-//  padding: 10px 20px;
-//  font-style: normal;
-//  font-weight: 500;
-//  font-size: 14px;
-//}
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+.pi {
+  vertical-align: middle;
+  color: $base-button-color;
+  &.pi-star-o {
+    color: $star-on-color;
+  }
+}
+
+body .ui-selectbutton .ui-button {
+  background-color: $without-color;
+  border: 1px solid $base-button-color;
+  border-radius: $border-radius;
+  color: $base-button-color;
+  overflow: hidden;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+body .ui-selectbutton .ui-button.ui-state-active:not(.ui-state-disabled):hover {
+  background: $button-color;
+  border: 1px $button-color solid;
+  color: #000000;
+}
+
+body .ui-selectbutton .ui-button.ui-state-active {
+  background-color: $button-color;
+  border-color: $button-color;
+  color: #000000;
+}
+
+body .ui-rating a .ui-rating-icon {
+  font-size: 17px!important;
+}
+
+body .ui-card {
+  width: 95%;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+body .ui-multiselect {
+  background: #ffffff;
+  border: $without-color;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+body .ui-multiselect-panel .ui-multiselect-header {
+  display: none;
+}
+
+body .ui-multiselect .ui-multiselect-label {
+  color: $base-font-color;
+}
+
+body .ui-accordion .ui-accordion-header a {
+  border: $without-color;
+  background-color: $without-color;
+}
+
+body .ui-accordion .ui-accordion-content {
+  border: $without-color;
+  background-color: $without-color;
+}
+
+body .ui-accordion .ui-accordion-header:not(.ui-state-disabled).ui-state-active a {
+  background-color: $without-color;
+  border: 1px solid $without-color;
+  color: $base-font-color;
+}
+
+body .ui-accordion .ui-accordion-header:not(.ui-state-disabled).ui-state-active a .ui-accordion-toggle-icon {
+  color: $base-font-color;
+}
 
 
+.card {
+  border: $without-color;
+}
