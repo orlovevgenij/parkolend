@@ -23,6 +23,7 @@ button {
   transition: all 0.2s ease;
   box-sizing: border-box;
   text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+  cursor: pointer;
   &.ghost_button {
     background: $without-color;
     border: 1px $base-button-color solid;
@@ -64,6 +65,13 @@ button {
 
   &:focus {
     outline: none;
+  }
+
+  &.red_btn {
+    background: $red-button;
+    border-color: $red-button;
+    color: #ffffff;
+    font-weight: 500;
   }
 }
 
